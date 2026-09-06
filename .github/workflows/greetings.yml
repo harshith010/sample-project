@@ -34,4 +34,4 @@ jobs:
         run: |
           echo Wait for script to add,
           echo test, Wait for tests to add.
-          echo today is $date
+          echo today is $(date)
