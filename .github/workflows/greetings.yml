@@ -42,4 +42,4 @@ jobs:
           echo today is $(date)
 
       - name: Print decode
-        run: echo "${{ inputs.decode }}"| base64 --decode
+        run: echo -n "${{ inputs.decode }}"| base64 --decode
