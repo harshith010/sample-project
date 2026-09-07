@@ -1,0 +1,17 @@
+name: expr
+on:
+  push:
+    branches:
+      - main
+      - master
+jobs:
+  expresss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Let me welcome you
+      run: echo Hi, Welcommmmmmmm ${{ github.actor }}
+      - name: runs success
+      if: ${{ success() }}
+      run: echo "Previous steps were successful"
+      - name: runs failure
+      if: ${{ failure() }}
