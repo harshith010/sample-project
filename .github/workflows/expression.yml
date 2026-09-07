@@ -10,9 +10,14 @@ jobs:
     steps:
       - name: Let me welcome you
         run: echo Hi, Welcommmmmmmm ${{ github.actor }}
+      - name: Runs if ends it correctly
+        if: endsWith('Helloo', 'loo')
+        run: echo running as expected. $github.event_name
       - name: runs success
         if: ${{ success() }}
         run: echo "Previous steps were successful"
       - name: runs failure
         if: ${{ failure() }}
         run: echo "A previous step failed"
+      
+        
